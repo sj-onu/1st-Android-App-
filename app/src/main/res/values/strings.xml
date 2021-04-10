@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HydroAuto</string>
+    <string name="btn_share_to_apps">scannow</string>
+    <string name="btn_scan">btn_scan</string>
+    <string name="btn_move_to_next_activity">btn_move_to_next_activity</string>
+    <string name="et_enter_msg">et_enter_msg</string>
+</resources>
