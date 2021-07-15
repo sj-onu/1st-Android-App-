@@ -1,5 +1,6 @@
 package uap.cse43.hydroauto
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.widget.ListView
@@ -47,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                         e.printStackTrace()
                     }
                 }
-        ) { error -> Toast.makeText(applicationContext, error.getMessage(), Toast.LENGTH_SHORT).show() }
+        ) { error -> val show: Any = Toast.makeText(applicationContext, error.getMessage(), Toast.LENGTH_SHORT).show() }
         val requestQueue: RequestQueue = Volley.newRequestQueue(this)
         requestQueue.add(stringRequest)
     }
@@ -56,3 +57,5 @@ class MainActivity : AppCompatActivity() {
         private const val JSON_URL = "https://api.thingspeak.com/channels/1334605/feeds.json"
     }
 }
+
+private fun Exception.getMessage(): Unit = Unit
